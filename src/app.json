@@ -1,21 +1,35 @@
 {
   "pages": [
-    "page/index/index"
+            "page/meeting/index",
+            "page/meeting/meeting-application/meeting-application"
   ],
   "window": {
-    "enableWK": "YES",
-    "enableDSL": true,
-    "defaultTitle": "企业内部E应用1.1",
-    "backgroundColor": "#F5F5F9",
-    "pullRefresh": false,
-    "allowsBounceVertical": true
+    "defaultTitle": "会议室预定",
+    "backgroundColor": "#F5F5F9"
   },
   "tabBar": {
     "textColor": "#404040",
     "selectedColor": "#108ee9",
     "backgroundColor": "#F5F5F9",
     "items": [
-      
+      {
+        "pagePath": "page/meeting/index",
+        "icon": "image/tasks.png",
+        "activeIcon": "image/tasks_hl.png",
+        "name": "我的会议"
+      },
+      {
+        "pagePath": "page/meeting/index",
+        "icon": "image/list.png",
+        "activeIcon": "image/list_hl.png",
+        "name": "会议申请"
+      },
+      {
+        "pagePath": "page/meeting/index",
+        "icon": "image/list.png",
+        "activeIcon": "image/list_hl.png",
+        "name": "我的"
+      }
     ]
   },
   "debug": true

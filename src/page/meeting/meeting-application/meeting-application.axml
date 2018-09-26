@@ -1,0 +1,71 @@
+<list-item disabled="{{false}}" thumb="{{picSrc+room.photo}}" arrow="{{false}}" align="{{item.align}}" onClick="onItemClick" multipleLine="{{true}}" wrap="{{true}}">  {{room.name}}                                           
+  <view>
+    <view class="am-list-brief" style="width:50%;float:left;">
+坐席:{{room.num}}人</view>
+    <view class="am-list-brief" style="width:50%;float:right;">
+类型:{{room.typeName}}   </view>
+  </view>
+  <view>
+    <view class="am-list-brief" style="width:50%;float:left;">
+排数:{{room.row}}    </view>
+    <view class="am-list-brief" style="width:50%;float:right;">
+列数:{{room.column}}    </view>
+  </view>
+  <view>
+    <view class="am-list-brief" style="width:50%;float:left;">
+地址:{{room.address}}    </view>
+    <view class="am-list-brief" style="width:50%;float:right;">
+楼层:{{room.buildDesc}}    </view>
+  </view>
+  <view >
+    <text class="am-list-brief" a:for="{{deviceItem}}" key="item-{{index}}" index="{{index}}" last="{{index === (deviceItem.length - 1)}}" style="border-color:gray; border-width:1px; border-style:solid;border-radius:3px;">{{item}}                                                                                                            
+      <text>
+      </view>
+    </list-item>
+    <form onSubmit="formSubmit">
+      <view class="page-section">
+        <view class="form-row">
+          <view class="form-row-label">会议主题</view>
+          <view class="form-row-content">
+            <input class="input" name="subject" maxlength="100" placeholder="*必填-请输入本次会议的主题" />
+          </view>
+        </view>
+        <view class="form-row">
+          <view class="form-row-label">会议描述</view>
+          <view >
+            <textarea style="width:100%" name="desc" placeholder="请输入会议描述" auto-height="{{false}}" maxlength="500" />
+          </view>
+        </view>
+        <view class="page-section">
+          <list>
+            <list-item thumb="{{users.avatar}}">
+              <view class="form-row-label">主持人</view>
+              <view slot="extra">
+                <button class="page-body-button" type="primary" size="mini" onTap="complexChoose">主持人</button>
+              </view>
+            </list-item>
+            <list-item>
+              <view style="width:30%;float:left;" class="form-row-label">通知方式</view>
+              <view style="width:50%;float:right;">
+                <segment values="{{noticeWay}}" name="noticeWay" selectedIndex="{{selectedNoticeIndex}}" onChange="handleNoticeChange" />
+              </view>
+            </list-item>
+            <list-item>
+              <view style="width:20%;float:left;" class="form-row-label">提醒方式</view>
+              <view style="width:70%;float:right;" class="fsize14">
+                <segment values="{{remindingWay}}" name="remindingWay" selectedIndex="{{selectedRemindingIndex}}" onChange="handleRemindChange" />
+              </view>
+            </list-item>
+            <view class="page-section">
+              <picker onChange="bindPickerChange" name="remindingTime" value="{{selectedTimeingIndex}}" range="{{remindingTime}}">
+                <view class="row">
+                  <view class="row-title">提醒时间</view>
+                  <view class="row-extra">{{remindingTime[selectedTimeingIndex]}}</view>
+                  <image class="row-arrow" src="/image/arrowright.png" mode="aspectFill" />
+                </view>
+              </picker>
+            </view>
+          </list>
+        </view>
+        <button class="footer" formType="submit" type="primary">申请会议</button>
+      </form>

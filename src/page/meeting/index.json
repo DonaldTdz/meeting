@@ -2,6 +2,7 @@
   "usingComponents":{
     "card":"../../mini-ddui/es/card/index",
      "list":"../../mini-ddui/es/list/index",
-    "list-item":"../../mini-ddui/es/list/list-item/index"
+    "list-item":"../../mini-ddui/es/list/list-item/index",
+    "breadcrumb":"../../mini-ddui/es/breadcrumb/index"
   }
 }

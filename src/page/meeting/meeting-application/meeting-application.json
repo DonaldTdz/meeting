@@ -1,0 +1,9 @@
+{
+   "usingComponents":{
+    "card":"../../../mini-ddui/es/card/index",
+     "list":"../../../mini-ddui/es/list/index",
+    "list-item":"../../../mini-ddui/es/list/list-item/index",
+    "input-item":"../../../mini-ddui/es/input-item/index",
+        "segment":"../../../mini-ddui/es/segment/index"
+  }
+}

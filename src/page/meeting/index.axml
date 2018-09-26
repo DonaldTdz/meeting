@@ -1,0 +1,17 @@
+<view class="meeting">
+  <view a:for="{{items}}">
+    <card key="item-{{index}}" arrow={{false}}  index="{{index}}" last="{{index === (items.length - 1)}}" footer="{{item.currentStatus}}" thumb="{{picSrc+item.photo}}" subTitle="{{item.roomTypeName}}" title="{{item.name}}" info="{{item}}" onClick="meetingApply" />
+    <!-- <breadcrumb values="{{values}}" onItemTap="onItemTap" /> -->
+  </view>
+  <!-- <view class="page-margin page-padding-bottom">
+    <list>
+      <view slot="header">会议室预定</view>
+      <block a:for="{{items}}">
+        <list-item class="listStyle" key="item-{{index}}" thumb="{{picSrc+item.photo}}" index="{{index}}" last="{{index === (items.length - 1)}}" arrow="{{true}}" wrap="{{true}}" onClick="meetingApply"> 
+                                    {{item.name}}                                
+          <view class="am-list-brief fsize12">坐席：{{item.num}}人</view>
+        </list-item>
+      </block>
+    </list>
+  </view> -->
+</view>
